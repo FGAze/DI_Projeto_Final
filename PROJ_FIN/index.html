@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SoundTracker — descubra artistas e acompanhe a cena musical.">
+  <title>SoundTracker — descubra música ao vivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="SoundTracker página inicial">
+      <span class="brand-mark">S<span>♪</span></span>
+      <span>sound<span class="brand-light">tracker</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#artistas">Artistas</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="header-cta" href="#artistas">Explorar artistas <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="pulse"></span> SUA PRÓXIMA DESCOBERTA COMEÇA AQUI</div>
+        <h1>Conheça a música<br> <span>perto de você.</span></h1>
+        <p>Descubra artistas, acompanhe a cena independente e encontre o próximo show que vai marcar sua história.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#artistas">Descobrir artistas <span>→</span></a>
+          <a class="text-link" href="#sobre">Conheça o projeto <span>↗</span></a>
+        </div>
+        <div class="hero-note"><span class="note-icon">♫</span><span>MPB <i>·</i> Rock & Metal <i>·</i> Jazz</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração abstrata de ondas sonoras">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="sound-core"><span>♫</span></div>
+        <div class="equalizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="floating-tag tag-top">LIVE / LOCAL</div>
+        <div class="floating-tag tag-bottom">SOM INDEPENDENTE</div>
+      </div>
+      <div class="hero-bottom"><span>01 — EXPLORE A CENA</span><span>ROLE PARA DESCOBRIR ↓</span></div>
+    </section>
+
+    <section class="artist-section" id="artistas">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow section-eyebrow">CURADORIA SOUNTRACKER</div>
+          <h2>Encontre seu <span>próximo som.</span></h2>
+          <p>Uma seleção inicial de artistas para você conhecer.</p>
+        </div>
+        <div class="catalog-count"><strong id="artist-count">06</strong><span>ARTISTAS<br>NO RADAR</span></div>
+      </div>
+
+      <div class="filter-row" aria-label="Filtrar artistas por gênero">
+        <div class="filter-buttons">
+          <button class="filter-button selected" data-filter="Todos">Todos <span>06</span></button>
+          <button class="filter-button" data-filter="MPB">MPB</button>
+          <button class="filter-button" data-filter="Rock/Metal">Rock / Metal</button>
+          <button class="filter-button" data-filter="Jazz">Jazz</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="artist-search" type="search" placeholder="Buscar artista..." aria-label="Buscar artista"></label>
+      </div>
+
+      <div class="artist-grid" id="artist-grid">
+        <article class="artist-card" data-name="Aurora de Rua" data-genre="MPB">
+          <div class="artist-image image-mpb"><span class="image-number">01</span><span class="image-symbol">◒</span><span class="genre-tag">MPB</span></div>
+          <div class="artist-info"><div><h3>Aurora de Rua</h3><p>Brasília, DF</p></div><span class="artist-arrow">↗</span></div>
+          <p class="artist-description">Canções autorais que misturam brasilidade, poesia e novos ritmos.</p>
+        </article>
+        <article class="artist-card" data-name="Vértice" data-genre="Rock/Metal">
+          <div class="artist-image image-rock"><span class="image-number">02</span><span class="image-symbol">ϟ</span><span class="genre-tag">ROCK</span></div>
+          <div class="artist-info"><div><h3>Vértice</h3><p>Goiânia, GO</p></div><span class="artist-arrow">↗</span></div>
+          <p class="artist-description">Banda de Rock Emo Alternativo inspirada em Nirvana e Smashing Pumpkins.</p>
+        </article>
+        <article class="artist-card" data-name="Blue Avenue" data-genre="Jazz">
+          <div class="artist-image image-jazz"><span class="image-number">03</span><span class="image-symbol">♬</span><span class="genre-tag">JAZZ</span></div>
+          <div class="artist-info"><div><h3>Blue Avenue</h3><p>São Paulo, SP</p></div><span class="artist-arrow">↗</span></div>
+          <p class="artist-description">Jazz contemporâneo com improvisos e atmosferas urbanas.</p>
+        </article>
+        <article class="artist-card" data-name="Maré Cheia" data-genre="MPB">
+          <div class="artist-image image-mare"><span class="image-number">04</span><span class="image-symbol">≈</span><span class="genre-tag">MPB</span></div>
+          <div class="artist-info"><div><h3>Maré Cheia</h3><p>Salvador, BA</p></div><span class="artist-arrow">↗</span></div>
+          <p class="artist-description">Uma mistura de ritmos brasileiros dos anos 70 e 90.</p></div>
+        </article>
+        <article class="artist-card" data-name="Ferro & Fúria" data-genre="Rock/Metal">
+          <div class="artist-image image-metal"><span class="image-number">05</span><span class="image-symbol">✳</span><span class="genre-tag">METAL</span></div>
+          <div class="artist-info"><div><h3>Ferro amp; Fúria</h3><p>Curitiba, PR</p></div><span class="artist-arrow">↗</span></div>
+          <p class="artist-description">Peso, velocidade e riffs inspirados na escola clássica do metal.</p>
+        </article>
+        <article class="artist-card" data-name="Clube do Azul" data-genre="Jazz">
+          <div class="artist-image image-clube"><span class="image-number">06</span><span class="image-symbol">✧</span><span class="genre-tag">JAZZ</span></div>
+          <div class="artist-info"><div><h3>Clube do Azul</h3><p>Rio de Janeiro, RJ</p></div><span class="artist-arrow">↗</span></div>
+          <p class="artist-description">Um encontro de jazz, soul e grooves para ouvir sem pressa.</p>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Nenhum artista encontrado. Tente outro nome ou gênero.</p>
+      <div class="catalog-foot"><span>ARTISTAS FICTÍCIOS · CONTEÚDO DEMONSTRATIVO</span><span>MAIS DESCOBERTAS EM BREVE <b>↗</b></span></div>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <div class="about-icon">♫</div>
+      <div><div class="eyebrow">O QUE É O SOUNTRACKER?</div><h2>A cena não para.<br><span>Acompanhe o movimento.</span></h2></div>
+      <p>Um espaço para descobrir artistas locais, acompanhar turnês e aproximar pessoas da música ao vivo. Este é só o começo.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">S<span>♪</span></span><span>sound<span class="brand-light">tracker</span></span></a><span>FEITO PARA QUEM VIVE MÚSICA.</span><span>© 2026 SOUNTRACKER · VERSÃO 1.0</span></footer>
+</body>
+</html>
